@@ -10,7 +10,10 @@
     "test": "mocha",
     "test:module2": "mocha test/module2.test.js",
     "test:module3": "mocha test/module3.test.js",
-    "test:module4": "mocha test/module4.test.js"
+    "test:module4": "mocha test/module4.test.js",
+    "build"       : "babel src -d build",
+    "build-clean" : "rm -rf build",
+    "postbuild-clean": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,7 +30,7 @@
     "fastify": "2.12.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.8.4",
+    "@babel/cli": "^7.13.16",
     "@babel/core": "7.8.7",
     "@babel/preset-env": "7.8.7",
     "mocha": "7.1.1",
